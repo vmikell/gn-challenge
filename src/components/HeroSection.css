@@ -110,6 +110,7 @@
   display: inline-block;
   margin: 4rem auto;
   width: 100%;
+  overflow: hidden;
 
   z-index: 9999;
 }
