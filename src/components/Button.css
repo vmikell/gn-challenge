@@ -1,0 +1,91 @@
+:root {
+  --primary: #e21837;
+  --secondary: #000;
+  --text-primary: #fff;
+  --text-btn: 'kg_happy_solidregular';
+}
+
+.btn--primary {
+  font-family: var(--text-btn);
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  margin-left: 0.15rem;
+  width: 12rem;
+  border: none;
+}
+.btn--primary:hover {
+  background-color: var(--primary);
+  transition: background-color 0.25s ease;
+}
+
+.btn--primary img {
+  padding-right: 0.5rem;
+}
+.btn--primary img:hover {
+  transform: scale(1.18);
+}
+
+.btn--secondary {
+  background-color: var(--primary);
+  color: var(--text-primary);
+  border: none;
+  margin: 0.15rem;
+  transition: all 0.3s ease-out;
+}
+.btn--secondary:hover {
+  background-color: var(--secondary);
+  transition: background-color 0.25s ease;
+}
+
+.btn--toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0px;
+  background-color: var(--primary);
+  width: 4rem;
+  height: 4rem;
+}
+.btn--toggle:hover {
+  background-color: var(--secondary);
+  transition: background-color 0.25s ease;
+}
+
+.btn--nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0px;
+  background-color: var(--secondary);
+  color: var(--text-primary);
+  width: 4rem;
+  height: 4rem;
+}
+
+i {
+  font-size: 1.8rem;
+  margin: auto;
+}
+i:hover {
+  transform: scale(1.18);
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn--medium {
+  padding: 20px 25px;
+  font-size: 15px;
+}
+
+.btn--large {
+  font-family: var(--text-btn);
+  width: 200px;
+  padding: 40px 15px;
+  font-size: 18px;
+  letter-spacing: 0.45px;
+  line-height: 0.26px;
+}
