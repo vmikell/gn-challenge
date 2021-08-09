@@ -65,7 +65,7 @@ const Navbar = () => {
           </Button>
           <Link to='/navigation'>
             <Button buttonStyle='btn--toggle' onClick={handleClick}>
-              <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+              <i className='fas fa-bars'/>
             </Button>
           </Link>
         </div>

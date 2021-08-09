@@ -3,10 +3,12 @@ import React from 'react'
 import '../../App.css'
 // IMPORT COMPONENTS
 import HeroSection from '../HeroSection'
+import Navbar from '../Navbar';
 
 const Home = () => {
   return (
     <>
+      <Navbar/>
       <HeroSection />
     </>
   )

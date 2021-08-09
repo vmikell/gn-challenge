@@ -10,8 +10,7 @@ import Navigation from './components/pages/Navigation'
 const App = () => {
   return (
     <>
-      <Router>
-        <Navbar />
+      <Router>        
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/menu' component={Menu} />

@@ -21,8 +21,10 @@ const NavigationSection = () => {
           <i className={click ? 'fas fa-bars' : 'fas fa-times'} />
         </Button>
       </Link>
-      <div className='navigation-background'></div>
-      <div className='navigation-card'></div>
+      <div className='navigation-background'>
+        <div className='navigation-card'></div>
+      </div>
+
       <div className='nav-card'>
         <ul className='upper-nav'>
           <li>MENU</li>

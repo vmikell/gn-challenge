@@ -144,8 +144,13 @@ MEDIA QUERIES STARTS HERE
     right: 2%;
   }
 }
+@media screen and (max-width: 1210px){
+  .nav-menu{
+    display:none;
+  }
+}
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1080px) {
   .nav-links {
     display: none;
   }
