@@ -14,6 +14,49 @@ const NavigationSection = () => {
 
   const handleClick = () => setClick(!click)
 
+  const menu = [
+    'Menu',
+    'Locations',
+    'Our Story',
+    'Pho To Go',
+    'Bookings',
+    'Careers',
+    'Contact',
+  ]
+
+  const socialMedia = [
+    'facebook-f',
+    'instagram',
+    'snapchat-ghost',
+    'youtube',
+    'twitter',
+  ]
+
+  const lowerNav = [
+    'Careers',
+    'FAQs',
+    'Privacy',
+    'Gift Vouchers'
+  ]
+
+  const renderNavitems = () => {
+    return menu.map((item, index) => {
+      return <li key={index}>{item}</li>
+    })
+  }
+
+  const renderSocialMedia = () => {
+    return socialMedia.map((item, index) => {
+      return <i class={`fab fa-${item}`} key={index}></i>
+    })
+  }
+
+  const renderLowerNav = () =>{
+    return lowerNav.map((item, index)=>{
+      return <li key={index}>{item}</li>
+    })
+  }
+
   return (
     <div className='navigation-container'>
       <Link to='/' onClick={handleClick}>
@@ -24,30 +67,10 @@ const NavigationSection = () => {
       <div className='navigation-background'>
         <div className='navigation-card'></div>
       </div>
-
       <div className='nav-card'>
-        <ul className='upper-nav'>
-          <li>MENU</li>
-          <li>LOCATIONS</li>
-          <li>OUR STORY</li>
-          <li>PHO TO GO</li>
-          <li>BOOKINGS</li>
-          <li>CAREERS</li>
-          <li>CONTACT</li>
-        </ul>
-        <div className='social-media'>
-          <i class='fab fa-facebook-f'></i>
-          <i class='fab fa-instagram'></i>
-          <i class='fab fa-snapchat-ghost'></i>
-          <i class='fab fa-youtube'></i>
-          <i class='fab fa-twitter'></i>
-        </div>
-        <ul className='lower-nav'>
-          <li>Careers</li>
-          <li>FAQs</li>
-          <li>Privacy</li>
-          <li>Gift Vouchers</li>
-        </ul>
+        <ul className='upper-nav'>{renderNavitems()}</ul>
+        <div className='social-media'>{renderSocialMedia()}</div>
+        <ul className='lower-nav'>{renderLowerNav()}</ul>
         <div className='nav-footer'>
           <a href='https://victormikell.com'>
             Website assembled by Victor Mikell

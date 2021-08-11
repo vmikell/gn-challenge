@@ -7,56 +7,39 @@ import '../App.css'
 import '../webfonts/kg_happy_regular/stylesheet.css'
 
 const HeroSection = () => {
+  const btn = [
+    'Menu',
+    'Book a Table',
+    'Delivery',
+    'Click & Collect',
+    'Nutrition',
+  ]
+
+  const renderHeroBtn = () => {
+    return btn.map((item, index) => {
+      return (
+        <Button
+          buttonStyle='btn--secondary'
+          buttonSize='btn--large'
+          btnId={`btn-${index + 1}`}
+          key={index}
+        >
+          {item}
+        </Button>
+      )
+    })
+  }
+
   return (
     <div className='hero-container'>
       <div className='hero-gradient'></div>
-      <img src='/images/Hero-Image-1.jpg' />
+      <img src='/images/Hero-Image-1.jpg' alt='Hero Background' />
       <div className='hero-text'>
         <div className='hero-text--background'>
           <p>Vietnamese street food</p>
         </div>
       </div>
-      <div className='hero-section-btn'>
-        <Button
-          buttonStyle='btn--secondary'
-          buttonSize='btn--large'
-          btnId='btn-1'
-        >
-          Menu
-        </Button>
-
-        <Button
-          buttonStyle='btn--secondary'
-          buttonSize='btn--large'
-          btnId='btn-2'
-        >
-          Book a Table
-        </Button>
-
-        <Button
-          buttonStyle='btn--secondary'
-          buttonSize='btn--large'
-          btnId='btn-3'
-        >
-          Delivery
-        </Button>
-
-        <Button
-          buttonStyle='btn--secondary'
-          buttonSize='btn--large'
-          btnId='btn-4'
-        >
-          Click & Collect
-        </Button>
-
-        <Button
-          buttonStyle='btn--secondary'
-          buttonSize='btn--large'
-          btnId='btn-5'
-        >
-          Nutrition
-        </Button>
-      </div>
+      <div className='hero-section-btn'>{renderHeroBtn()}</div>
     </div>
   )
 }

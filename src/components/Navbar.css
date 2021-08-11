@@ -75,7 +75,7 @@ nav {
   position: relative;
   color: var(--text-primary);
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   text-decoration: none;
   padding: 0rem 0.75rem;
   height: 50%;
@@ -144,9 +144,9 @@ MEDIA QUERIES STARTS HERE
     right: 2%;
   }
 }
-@media screen and (max-width: 1210px){
-  .nav-menu{
-    display:none;
+@media screen and (max-width: 1210px) {
+  .nav-menu {
+    display: none;
   }
 }
 

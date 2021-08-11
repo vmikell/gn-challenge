@@ -6,9 +6,19 @@ import HeroSection from '../HeroSection'
 import Navbar from '../Navbar';
 
 const Home = () => {
+  const menu = [
+    'Menu',
+    'Locations',
+    'Our Story',
+    'Gift Vouchers',    
+    'Careers',
+    
+  ]
+
+  
   return (
     <>
-      <Navbar/>
+      <Navbar menu={menu}/>
       <HeroSection />
     </>
   )

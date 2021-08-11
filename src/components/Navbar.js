@@ -8,10 +8,23 @@ import { Button } from './Button'
 import '../webfonts/kg_happy_solid/stylesheet.css'
 import '../webfonts/kg_tangled_up_in_you/stylesheet.css'
 
-const Navbar = () => {
+const Navbar = ({ menu }) => {
   const [click, setClick] = useState(false)
 
   const handleClick = () => setClick(!click)
+
+  const renderNavItems = () => {
+    return menu.map((item, index) => {
+      return (
+        <li className='nav-item' key={index}>
+          <Link to={`/${item} `} className='nav-links'>
+            {item}
+          </Link>
+        </li>
+      )
+    })
+  }
+  console.log(menu)
 
   return (
     <div className='navbar-wrapper'>
@@ -23,33 +36,7 @@ const Navbar = () => {
           />
         </Link>
         <div className='navbar-container'>
-          <ul className='nav-menu'>
-            <li className='nav-item'>
-              <Link to='/menu' className='nav-links'>
-                MENU
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/locations' className='nav-links'>
-                LOCATIONS
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/our-story' className='nav-links'>
-                OUR STORY
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/gift-vouchers' className='nav-links'>
-                GIFT VOUCHERS
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link to='/careers' className='nav-links'>
-                CAREERS
-              </Link>
-            </li>
-          </ul>
+          <ul className='nav-menu'>{renderNavItems()}</ul>
         </div>
         <div className='btn-wrapper'>
           <Button buttonStyle='btn--primary'>
@@ -61,11 +48,11 @@ const Navbar = () => {
             Book a Table
           </Button>
           <Button buttonStyle='btn--primary'>
-            <i class='fas fa-map-marker-alt btn--icon'></i>Pho To Go
+            <i className='fas fa-map-marker-alt btn--icon'></i>Pho To Go
           </Button>
           <Link to='/navigation'>
             <Button buttonStyle='btn--toggle' onClick={handleClick}>
-              <i className='fas fa-bars'/>
+              <i className='fas fa-bars' />
             </Button>
           </Link>
         </div>
